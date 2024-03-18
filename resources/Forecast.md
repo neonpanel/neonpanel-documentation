@@ -15,7 +15,7 @@ This endpoint is used to create a forecast for a specific company.
 
 ### Request
 - **Method:** POST
-- **URL:** `https://my.neonpanel.com/api/v1/companies/{companyUiid}/forecasts`
+- **URL:** `https://my.neonpanel.com/api/v1/companies/<companyUiid>/forecasts`
 - **Headers:**
     - `Authorization: Bearer <access_token>`
 - **Body:**
@@ -56,7 +56,7 @@ This endpoint is used to update a forecast for a specific company.
 
 ### Request
 - **Method:** PUT
-- **URL:** `https://my.neonpanel.com/api/v1/companies/{companyUiid}/forecasts`
+- **URL:** `https://my.neonpanel.com/api/v1/companies/<companyUiid>/forecasts`
 - **Headers:**
     - `Authorization: Bearer <access_token>`
 - **Body:**
