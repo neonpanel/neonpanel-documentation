@@ -29,9 +29,8 @@ This endpoint is used to obtain an access token by providing client ID and clien
 - **Method:** POST
 - **URL:** `https://my.neonpanel.com/auth/token`
 - **Body:**
-    - **Mode:** formdata
-        - `client_id`: The client ID provided by the NeonPanel platform.
-        - `client_secret`: The client secret provided by the NeonPanel platform.
+    - `client_id`: The client ID provided by the NeonPanel platform.
+    - `client_secret`: The client secret provided by the NeonPanel platform.
 
 ### Response
 - **Status Code:** 200 OK
