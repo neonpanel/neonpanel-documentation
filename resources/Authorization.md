@@ -11,8 +11,6 @@ The preferred way to authenticate with the API is by using client ID and client 
 
 ## Error Codes
 The API may return the following error codes:
-
-- 401 Unauthorized: Invalid client credentials.
 - 500 Internal Server Error: Server error occurred.
 
 ## Rate Limit
