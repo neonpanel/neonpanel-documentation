@@ -112,14 +112,16 @@ This endpoint is used to update a forecast for a specific company.
   }
   ```
   
-## Update Forecast Items
+## Create Forecast Items
 
 ### Description
 This endpoint is used to update a forecast for a specific company.
 
 ### Request
-- **Method:** PUT
+- **Method:** POST
 - **URL:** `https://my.neonpanel.com/api/v1/companies/<company_uiid>/forecasts/<forecast_uuid>/items`
+- **Parameters**
+  - **items:** (Required, Array) The parameter can contain a maximum of 12 elements
 - **Headers:**
     - `Authorization: Bearer <access_token>`
 - **Body:**
