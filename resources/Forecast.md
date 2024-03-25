@@ -162,7 +162,23 @@ This endpoint is used to update a forecast for a specific company.
       "created_at": "2024-03-25T14:34:10.000000Z"
     }
   ]
-  ```
+  ```  
+
+## Delete Forecast Items
+
+### Description
+This endpoint is used to delete a forecast for a specific company.
+
+### Request
+- **Method:** DELETE
+- **URL:** `https://my.neonpanel.com/api/v1/companies/<company_uiid>/forecasts/<forecast_uuid>/items`
+- **Headers:**
+    - `Authorization: Bearer <access_token>`
+- **Body:** (empty)
+
+### Response
+- **Status Code:** 204 Not Content
+- **Body:** (empty)
 
 
 
