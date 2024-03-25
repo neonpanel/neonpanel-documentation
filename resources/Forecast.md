@@ -6,7 +6,7 @@ This API provides functionality for managing forecasts in the NeonPanel platform
 ## Overview
 This API allows users to update and create forecasts for companies in the NeonPanel platform.
 
-## Supported params
+## Description of parameters
 This API endpoint is tailored for the submission and validation of market analysis data, with a specific focus on forecasts. It mandates various attributes, each governed by specific validation rules to assure data integrity and consistency. The updated descriptions of the expected parameters now include the item list limitation and information about the company UUID:
 
 - **name:** (Required, String) A unique name identifying the analysis, limited to 255 characters.
@@ -47,19 +47,7 @@ This endpoint is used to create a forecast for a specific company.
     "type": "target",
     "parameter": "sales",
     "marketplace": "US",
-    "sales_channel": "Online",
-    "items": [
-      {
-        "sku": "SKU12345",
-        "period": "2024-02-01",
-        "value": "234"
-      },
-      {
-        "sku": "SKU67890",
-        "period": "2024-05-02",
-        "value": "234"
-      }
-    ]
+    "sales_channel": "Amazon"
   }
   ```
 
@@ -68,11 +56,17 @@ This endpoint is used to create a forecast for a specific company.
 - **Body:**
   ```json
   {
-    "name": "2024-02 year forecast1",
+    "name": "2024-02 year forecast",
     "version": "february-001",
-    "uuid": "f8705091d5d7421f8ad5c61f308c3e7ecf19f66f",
-    "updated_at": "2024-03-20T10:08:27.000000Z",
-    "created_at": "2024-03-20T10:08:27.000000Z"
+    "periodicity": "day",
+    "unit": "USD",
+    "type": "target",
+    "parameter": "sales",
+    "uuid": "d818a2b8e36f4ec0a6ff99b32b3361cc5d3102f6",
+    "updated_at": "2024-03-25T13:43:56.000000Z",
+    "created_at": "2024-03-25T13:43:56.000000Z",
+    "marketplace": "US",
+    "sales_channel": "Amazon"
   }
   ```
 
@@ -95,7 +89,42 @@ This endpoint is used to update a forecast for a specific company.
     "type": "target",
     "parameter": "sales",
     "marketplace": "US",
-    "sales_channel": "Online",
+    "sales_channel": "Amazon"
+  }
+  ```
+
+### Response
+- **Status Code:** 200 OK
+- **Body:** 
+  ```json
+  {
+    "name": "2024-02 year forecast",
+    "version": "february-001",
+    "periodicity": "day",
+    "unit": "USD",
+    "type": "target",
+    "parameter": "sales",
+    "uuid": "d818a2b8e36f4ec0a6ff99b32b3361cc5d3102f6",
+    "updated_at": "2024-03-25T13:43:56.000000Z",
+    "created_at": "2024-03-25T13:43:56.000000Z",
+    "marketplace": "US",
+    "sales_channel": "Amazon"
+  }
+  ```
+  
+## Update Forecast Items
+
+### Description
+This endpoint is used to update a forecast for a specific company.
+
+### Request
+- **Method:** PUT
+- **URL:** `https://my.neonpanel.com/api/v1/companies/<company_uiid>/forecasts/<forecast_uuid>/items`
+- **Headers:**
+    - `Authorization: Bearer <access_token>`
+- **Body:**
+  ```json
+  {
     "items": [
       {
         "sku": "SKU12345",
@@ -115,13 +144,24 @@ This endpoint is used to update a forecast for a specific company.
 - **Status Code:** 200 OK
 - **Body:** 
   ```json
-  {
-    "name": "2024-02 year forecast1",
-    "version": "february-001",
-    "uuid": "f8705091d5d7421f8ad5c61f308c3e7ecf19f66f",
-    "updated_at": "2024-03-20T10:08:27.000000Z",
-    "created_at": "2024-03-20T10:08:27.000000Z"
-  }
+  [
+    {
+      "sku": "SKU12345",
+      "period": "2024-02-01",
+      "value": "234",
+      "uuid": "2837d765364240e1a1e0f9507191debf0912b114",
+      "updated_at": "2024-03-25T14:34:09.000000Z",
+      "created_at": "2024-03-25T14:34:09.000000Z"
+    },
+    {
+      "sku": "SKU67890",
+      "period": "2024-05-02",
+      "value": "234",
+      "uuid": "a36473d4b2bb4a4a9102f5b641b2b852c19f7b2c",
+      "updated_at": "2024-03-25T14:34:10.000000Z",
+      "created_at": "2024-03-25T14:34:10.000000Z"
+    }
+  ]
   ```
 
 
