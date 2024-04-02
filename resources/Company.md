@@ -14,7 +14,7 @@ This API allows get company list in the NeonPanel platform.
 ## Company List
 
 ### Description
-This endpoint is used to create a forecast for a specific company.
+This endpoint is used to get a list of companies.
 
 ### Request
 - **Method:** GET
