@@ -9,7 +9,7 @@ This API allows users to update and create forecasts for companies in the NeonPa
 ## Description of parameters
 This API endpoint is tailored for the submission and validation of market analysis data, with a specific focus on forecasts. It mandates various attributes, each governed by specific validation rules to assure data integrity and consistency. The updated descriptions of the expected parameters now include the item list limitation and information about the company UUID:
 
-[Get Company UUID](resources/Company.md)
+[Get Company UUID](Company.md)
 
 - **name:** (Required, String) A unique name identifying the analysis, limited to 255 characters.
 - **version:** (Required, String) The version of the analysis document, allowing up to 255 characters.
@@ -26,7 +26,44 @@ This API endpoint is tailored for the submission and validation of market analys
 
 ---
 
-## Create Forecast
+## List
+
+### Description
+This endpoint is used to get a list of forecasts.
+
+### Description of parameters
+- **page:** (Integer) Page number. Default value is 1.
+- **per_page:** (Integer) Number of companies to return. Minimum value is 10, maximum value is 60, default is 30.
+
+### Request
+- **Method:** GET
+- **URL:** `https://my.neonpanel.com/api/v1/companies/<company_uiid>/forecasts`
+- **Headers:**
+  - `Authorization: Bearer <access_token>`
+- **Body:** (empty)
+
+### Response
+- **Status Code:** 200 OK
+- **Body:**
+  ```json
+  {
+      "current_page": 1,
+      "per_page": 10,
+      "last_page": 1,
+      "data": [
+          {
+               "uuid": "21fe6a88bf744869a60f81a19aab209c361198bf",
+               "name": "My Company",
+               "currency": "USD",
+               "timezone": "America/Los_Angeles"
+          }
+       ]
+  }
+  ```
+
+---
+
+## Create 
 
 ### Description
 This endpoint is used to create a forecast for a specific company.
@@ -71,7 +108,7 @@ This endpoint is used to create a forecast for a specific company.
   
 ---
 
-## Update Forecast
+## Update
 
 ### Description
 This endpoint is used to update a forecast for a specific company.
@@ -114,7 +151,7 @@ This endpoint is used to update a forecast for a specific company.
 
 ---
 
-## Create Forecast Items
+## Create Items
 
 ### Description
 This endpoint is used to update a forecast for a specific company.
@@ -170,7 +207,7 @@ This endpoint is used to update a forecast for a specific company.
 
 ---
 
-## Delete Forecast Items
+## Delete Items
 
 ### Description
 This endpoint is used to delete a forecast for a specific company.
