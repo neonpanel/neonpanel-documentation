@@ -156,6 +156,45 @@ This endpoint is used to update a forecast for a specific company.
 
 ---
 
+## List Items
+
+### Description
+This endpoint is used to get a list of forecast items.
+
+### Description of parameters
+- **page:** (Integer) Page number. Default value is 1.
+- **per_page:** (Integer) Number of companies to return. Minimum value is 10, maximum value is 60, default is 30.
+
+### Request
+- **Method:** GET
+- **URL:** `https://my.neonpanel.com/api/v1/companies/<company_uiid>/forecasts/<forecast_uuid>/items`
+- **Headers:**
+  - `Authorization: Bearer <access_token>`
+- **Body:** (empty)
+
+### Response
+- **Status Code:** 200 OK
+- **Body:**
+  ```json
+  {
+     "current_page": 1,
+     "per_page": 30,
+     "last_page": 1,
+     "data": [
+       {
+         "uuid": "a0a2290e1d3a4b0ca4da916251d8eb839cd47b27",
+         "sku": "SKU12345",
+         "period": "2024-02-01",
+         "value": "234",
+         "created_at": "2024-04-01T12:26:14.000000Z",
+         "updated_at": "2024-04-01T12:26:14.000000Z"
+       }
+     ]
+  }
+  ```
+
+---
+
 ## Create Items
 
 ### Description
