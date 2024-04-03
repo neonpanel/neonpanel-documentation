@@ -198,7 +198,7 @@ This endpoint is used to get a list of forecast items.
 ## Create Items
 
 ### Description
-This endpoint is used to update a forecast for a specific company.
+This endpoint is used to create forecast items for a specific company.
 
 ### Request
 - **Method:** POST
@@ -248,6 +248,57 @@ This endpoint is used to update a forecast for a specific company.
     }
   ]
   ```  
+
+---
+
+## Update Item
+
+### Description
+This endpoint is used to update a forecast item for a specific company.
+
+### Request
+- **Method:** PUT
+- **URL:** `https://my.neonpanel.com/api/v1/companies/<company_uiid>/forecasts/<forecast_uuid>/items/<forecast_item_uuid>`
+- **Headers:**
+  - `Authorization: Bearer <access_token>`
+- **Body:**
+  ```json
+  {
+     "value": "234"
+  }
+  ```
+
+### Response
+- **Status Code:** 200 OK
+- **Body:**
+  ```json
+  {
+    "sku": "SKU12345",
+    "period": "2024-02-01",
+    "value": "234",
+    "uuid": "2837d765364240e1a1e0f9507191debf0912b114",
+    "updated_at": "2024-03-25T14:34:09.000000Z",
+    "created_at": "2024-03-25T14:34:09.000000Z"
+  }
+  ```  
+
+---
+
+## Delete Item
+
+### Description
+This endpoint is used to delete a forecast item for a specific company.
+
+### Request
+- **Method:** DELETE
+- **URL:** `https://my.neonpanel.com/api/v1/companies/<company_uiid>/forecasts/<forecast_uuid>/items/<forecast_item_uuid>`
+- **Headers:**
+  - `Authorization: Bearer <access_token>`
+- **Body:** (empty)
+
+### Response
+- **Status Code:** 204 Not Content
+- **Body:** (empty)
 
 ---
 
