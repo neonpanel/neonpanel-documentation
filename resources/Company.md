@@ -29,7 +29,7 @@ This endpoint is used to get a list of companies.
   ```json
   {
       "current_page": 1,
-      "per_page": 10,
+      "per_page": 30,
       "last_page": 1,
       "data": [
           {

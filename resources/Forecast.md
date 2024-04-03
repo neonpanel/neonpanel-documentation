@@ -47,17 +47,22 @@ This endpoint is used to get a list of forecasts.
 - **Body:**
   ```json
   {
-      "current_page": 1,
-      "per_page": 10,
-      "last_page": 1,
-      "data": [
-          {
-               "uuid": "21fe6a88bf744869a60f81a19aab209c361198bf",
-               "name": "My Company",
-               "currency": "USD",
-               "timezone": "America/Los_Angeles"
-          }
-       ]
+    "current_page": 1,
+    "per_page": 30,
+    "last_page": 1,
+    "data": [
+      {
+        "uuid": "dea732ddfd1348e5a25ea3c52ef30dbeea2f796a",
+        "name": "2024-02 year forecast1",
+        "version": "february-001",
+        "created_at": "2024-03-25T13:29:26.000000Z",
+        "updated_at": "2024-03-25T13:29:26.000000Z",
+        "periodicity": "day",
+        "unit": "USD",
+        "type": "target",
+        "parameter": "sales"
+      }
+    ]
   }
   ```
 
