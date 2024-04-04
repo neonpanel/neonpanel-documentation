@@ -207,9 +207,7 @@ This endpoint is used to get a list of forecast items.
 This endpoint is used to create forecast items for a specific company.
 
 ### Description of parameters
-This API endpoint is tailored for the submission and validation of market analysis data, with a specific focus on forecasts. It mandates various attributes, each governed by specific validation rules to assure data integrity and consistency. The updated descriptions of the expected parameters now include the item list limitation and information about the company UUID:
-
-[Get Company UUID](Company.md)
+This API endpoint is tailored for the submission and validation of market analysis data, with a specific focus on forecasts. It mandates various attributes, each governed by specific validation rules to assure data integrity and consistency. The updated descriptions of the expected parameters now include the item list limitation and information about the company UUID: [Get Company UUID](Company.md)
 
 - **items:** (Required, Array) A list of items to be included in the analysis. The list is capped at 100 items to ensure manageability and performance. Each item in the array must follow specific structure and validation rules:
 - **items.*.sku:** (Required, String) The stock keeping unit (SKU), serving as an inventory identifier for each item. It is capped at 255 characters and must be validated as a valid SKU for the company.
@@ -273,9 +271,7 @@ This API endpoint is tailored for the submission and validation of market analys
 This endpoint is used to update a forecast item for a specific company.
 
 ### Description of parameters
-This API endpoint is tailored for the submission and validation of market analysis data, with a specific focus on forecasts. It mandates various attributes, each governed by specific validation rules to assure data integrity and consistency. The updated descriptions of the expected parameters now include the item list limitation and information about the company UUID:
-
-[Get Company UUID](Company.md)
+This API endpoint is tailored for the submission and validation of market analysis data, with a specific focus on forecasts. It mandates various attributes, each governed by specific validation rules to assure data integrity and consistency. The updated descriptions of the expected parameters now include the item list limitation and information about the company UUID: [Get Company UUID](Company.md)
 
 - **value:** (Required, String) The value associated with each item for the specified period.
 
