@@ -126,7 +126,7 @@ This API endpoint is tailored for the submission and validation of market analys
 
 ### Request
 - **Method:** PUT
-- **URL:** `https://my.neonpanel.com/api/v1/companies/<company_uiid>/forecasts/<forecast_uuid>`
+- **URL:** `https://my.neonpanel.com/api/v1/companies/<company_uuid>/forecasts/<forecast_uuid>`
 - **Headers:**
     - `Authorization: Bearer <access_token>`
 - **Body:**
