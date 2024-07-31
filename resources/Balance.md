@@ -1,7 +1,7 @@
-# Balance API Documentation
+# Inventory Balance API Documentation
 
 ## Introduction
-This API provides functionality for managing balances in the NeonPanel platform.
+This API provides functionality for managing inventory balances in the NeonPanel platform. It specifically handles Inventory Balances information from third-party sources, which is used for the Inventory Audit process. During this process, NeonPanel compares internally calculated data with external data to ensure accuracy and consistency.
 
 ---
 
