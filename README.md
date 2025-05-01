@@ -9,3 +9,4 @@ Welcome to the API documentation for the NeonPanel platform. Below you can find 
 - [Company](resources/Company.md)
 - [Balance](resources/Balance.md)
 - [Forecast](resources/Forecast.md)
+- [Inventory Identification and Initialization Logic](resources/InventoryIdentificationAndInitializationLogic.md)
