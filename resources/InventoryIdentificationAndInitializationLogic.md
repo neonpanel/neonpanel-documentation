@@ -6,12 +6,12 @@ This section describes the logic behind two key methods responsible for **findin
 
 ## 🔧 Methods Overview
 
-### 1. `firstOrCreateVerified(...)`
+### 1. `App\Services\App::firstOrCreateVerified(...)`
 
 Responsible for both **searching and creating** inventory records.
 > This method requires a `Seller` and `FNSKU`, which are not always available in all reports from Amazon APIs.
 
-### 2. `firstRelevant(...)`
+### 2. `App\Services\App::firstRelevant(...)`
 
 Responsible for **searching only**.
 > Used when only `SKU` is available (not `FNSKU`) or when there is no seller context at the time of lookup.
