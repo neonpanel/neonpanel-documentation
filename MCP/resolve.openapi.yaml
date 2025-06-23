@@ -1,0 +1,71 @@
+openapi: 3.0.3
+info:
+  title: Resolve Service
+  version: 1.0.0
+  description: |
+    Resolve endpoint for mapping human-readable inputs to internal IDs.
+paths:
+  /resolve:
+    get:
+      summary: Resolve human term to system ID
+      parameters:
+        - in: query
+          name: type
+          required: true
+          schema:
+            type: string
+            enum: [inventory, vendor, warehouse, category, user]
+        - in: query
+          name: query
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: company_id
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: marketplace_id
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: limit
+          required: false
+          schema:
+            type: integer
+            default: 5
+            maximum: 20
+      responses:
+        '200':
+          description: Resolved matches
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  type:
+                    type: string
+                    example: inventory
+                  query:
+                    type: string
+                    example: iPhone 13
+                  matches:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          example: inv_123456
+                        name:
+                          type: string
+                        sku:
+                          type: string
+                        asin:
+                          type: string
+                        company_id:
+                          type: string
+                        marketplace_id:
+                          type: string
