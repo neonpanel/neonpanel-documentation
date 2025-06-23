@@ -1,0 +1,26 @@
+{
+  "auth": {
+    "token_header": "Authorization",
+    "required_scopes": ["read:data"],
+    "access_control": true
+  },
+  "cache": {
+    "enabled": true,
+    "ttl_seconds": 300
+  },
+  "api_routes": {
+    "neonpanel": "https://api.neonpanel.com",
+    "quickbooks": "https://api.quickbooks.com",
+    "amazon_sp": "https://sellingpartnerapi-na.amazon.com"
+  },
+  "resolve": {
+    "endpoint": "/resolve",
+    "default_limit": 5
+  },
+  "reference_sources": {
+    "dashboards": "/references/dashboards",
+    "projects": "/references/projects",
+    "documents": "/references/documents",
+    "qbo_docs": "/references/qbo"
+  }
+}
