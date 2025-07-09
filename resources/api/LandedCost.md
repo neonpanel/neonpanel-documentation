@@ -23,7 +23,7 @@ This endpoint is used to get a list of inventory's landed costs.
 ### Request
 
 - **Method:** GET
-- **URL:** `https://my.neonpanel.com/api/v1/companies/<company_uuid>/inventories/{inventory_id}/landed-costs`
+- **URL:** `https://my.neonpanel.com/api/v1/companies/<company_uuid>/inventory-items/{inventory_id}/landed-costs`
 - **Headers:**
     - `Authorization: Bearer <access_token>`
 - **Body:**

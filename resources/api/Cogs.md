@@ -25,7 +25,7 @@ This endpoint is used to get a list of inventory's COGS.
 ### Request
 
 - **Method:** GET
-- **URL:** `https://my.neonpanel.com/api/v1/companies/<company_uuid>/inventories/{inventory_id}/cogs`
+- **URL:** `https://my.neonpanel.com/api/v1/companies/<company_uuid>/inventory-items/{inventory_id}/cogs`
 - **Headers:**
     - `Authorization: Bearer <access_token>`
 - **Body:**
